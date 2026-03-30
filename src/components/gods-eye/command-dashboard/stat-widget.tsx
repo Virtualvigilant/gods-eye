@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useMotionValue, useSpring, useEffect as useFramerEffect } from "framer-motion";
+import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import HolographicCard from "../shared/holographic-card";
 
