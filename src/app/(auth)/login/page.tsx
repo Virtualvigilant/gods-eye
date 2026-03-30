@@ -18,6 +18,7 @@ const BOOT_LINES = [
   "GOD'S EYE ONLINE.",
 ];
 
+
 // ── Typewriter component ──────────────────────────────────────────────────────
 function TypewriterLine({ text, onComplete }: { text: string; onComplete?: () => void }) {
   const [displayed, setDisplayed] = useState("");
@@ -285,11 +286,12 @@ export default function LoginPage() {
                 <label className="font-mono text-xs text-surveillance-cyan/60 tracking-widest uppercase">
                   Access Key
                 </label>
-                <input
-                  type="password"
-                  value={accessKey}
-                  onChange={e => setAccessKey(e.target.value)}
-                  onKeyDown={e => e.key === "Enter" && handleLogin()}
+                <div className="relative">
+                  <input
+                    type="password"
+                    value={accessKey}
+                    onChange={e => setAccessKey(e.target.value)}
+                    onKeyDown={e => e.key === "Enter" && handleLogin()}
                   placeholder="••••••••••••"
                   className="w-full bg-surveillance-deepest border rounded px-4 py-3 font-mono text-sm text-surveillance-cyan placeholder-surveillance-cyan/20 outline-none transition-all duration-200"
                   style={{
@@ -297,6 +299,7 @@ export default function LoginPage() {
                     boxShadow: accessKey ? "0 0 10px rgba(0,240,255,0.1)" : "none",
                   }}
                 />
+                </div>
               </div>
 
               {/* Error */}
