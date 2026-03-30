@@ -7,7 +7,7 @@ interface Props {
   children: ReactNode;
   className?: string;
   glowColor?: "cyan" | "magenta" | "amber" | "danger";
-  animate?: boolean;
+  animate?: boolean; 
 }
 
 const glowMap = {
